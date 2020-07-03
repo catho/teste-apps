@@ -1,4 +1,6 @@
 const jwtDecoder = require('jwt-decode');
+const express = require('express');
+const path = require('path');
 const db = require('../db');
 
 const middleware = (request, response, next) => {
@@ -22,6 +24,8 @@ const middleware = (request, response, next) => {
 }
 
 const routes = (server) => {
+  server.use('/assets', express.static(path.join(__dirname, '../../assets')));
+
   server.get(
     '/suggestion',
     middleware,
