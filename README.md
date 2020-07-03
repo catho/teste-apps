@@ -1,4 +1,4 @@
-# Teste para desenvolvevedores mobile Catho
+# Teste para desenvolvedores mobile Catho
 Este é o teste técnico para processo seletivo para trabalhar com desenvolvimento de apps mobile na Catho.
 
 ## Desafio
@@ -11,7 +11,7 @@ O seu aplicativo deve seguir o layout abaixo como referência.
 
 #### Assets
 Os assets estão disponíveis na pasta /api/assets/.
-Você pode utilizar ele dentro do applicativo ou carregá-las utilizando o host da api http://localhost:4040/assets
+Você pode utilizar ele dentro do aplicativo ou carregá-las utilizando o host da api http://localhost:4040/assets
 
 ---
 
@@ -33,23 +33,23 @@ Você pode utilizar ele dentro do applicativo ou carregá-las utilizando o host 
 - Experiência de usuário
 
 ## Melhorias
-Realize o teste com os recursos disponíveis, porém anote e nos envie qualquer melhoria que gostaria de realizar e por que deveríamos implementar tal melhoria.
+Realize o teste com os recursos disponíveis, porém anote e nos envie quaisquer sugestão de melhoria que julgar adequadas e por que deveríamos implementá-las.
 
 ---
 
 ### API
-Abaixo seguem os recursos e como executar a api que retornará os dados para a construção da tela.
-
-#### Mapa
-- Para dados de usuário usar o recurso /auth;
-- Para dados de sugestão usar o recurso /suggestion;
-- Para dados de dica usa o recurso /tips;
-- Para gravar a pesquisa na dica usar o recurso /survey;
+Abaixo, seguem os recursos e como executar a api que retornará os dados para a construção da tela.
 
 #### Roteiro
 1. Carregue as chaves de autenticação das apis (/keys);
-2. Como não teremos uma tela de login, escolha um dos ids disponíveis no metodo /auth;
-3. Agora você tem todos os dados de que necessita para realizar os demais recursos. A ordem dos requests fica a seu critério.
+2. Como não teremos uma tela de login, escolha um dos ids disponíveis no método /auth;
+3. Agora você tem todos os dados de que necessita para implementar os demais recursos. A ordem dos requests fica a seu critério.
+
+#### Features
+1. Usuário visualiza a foto cadastrada. Para essa feature você deve usar o recurso /auth.
+2. Usuário pode interagir com slider com sugestão de vagas (sugestão de até 5 vagas): caso opte por se aplicar a uma delas, o texto do botão muda para “CV enviado”. Para essa feature você deve usar o recurso /suggestion.
+3. Usuário visualiza uma dica oferecida pela Catho. Para essa feature você deve usa o recurso /tips.
+4. Usuário pode interagir com a dica, mencionando se ela foi útil ou não. Para essa feature você deve usar o recurso /survey.
 
 #### Pré requisitos
 - [Docker](https://www.docker.com/) ou [NodeJs](https://nodejs.org/en/)
