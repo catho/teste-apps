@@ -7,7 +7,7 @@ Desenvolver uma tela de aplicativo seguindo o layout proposto como referência e
 ### Layout
 O seu aplicativo deve seguir o layout abaixo como referência.
 
-TODO: Layout
+![Layout proposto](/img/HOME.png)
 
 #### Assets
 Os assets estão disponíveis na pasta /api/assets/.
