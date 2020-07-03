@@ -40,6 +40,12 @@ Realize o teste com os recursos disponíveis, porém anote e nos envie qualquer 
 ### API
 Abaixo seguem os recursos e como executar a api que retornará os dados para a construção da tela.
 
+#### Mapa
+- Para dados de usuário usar o recurso /auth;
+- Para dados de sugestão usar o recurso /suggestion;
+- Para dados de dica usa o recurso /tips;
+- Para gravar a pesquisa na dica usar o recurso /survey;
+
 #### Roteiro
 1. Carregue as chaves de autenticação das apis (/keys);
 2. Como não teremos uma tela de login, escolha um dos ids disponíveis no metodo /auth;
