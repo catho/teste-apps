@@ -1,5 +1,5 @@
 # Teste para desenvolvevedores mobile Catho
-Este é o teste técnico para processo seletivo de desenvolvimento de apps mobile da Catho.
+Este é o teste técnico para processo seletivo para trabalhar com desenvolvimento de apps mobile na Catho.
 
 ## Desafio
 Desenvolver uma tela de aplicativo seguindo o layout proposto como referência e uma api mockada para carregar os dados.
@@ -11,12 +11,12 @@ O seu aplicativo deve seguir o layout abaixo como referência.
 
 #### Assets
 Os assets estão disponíveis na pasta /api/assets/.
-Você pode utilizar ele dentro do applicativo ou carrega-las utilizando o host da api http://localhost:4040/assets
+Você pode utilizar ele dentro do applicativo ou carregá-las utilizando o host da api http://localhost:4040/assets
 
 ---
 
 ### Premissas
-**Importante:** escolha um conforme a vaga que está participando no processo.
+**Importante:** escolha uma linguagem conforme a vaga que está participando no processo.
 
 - Para desenvolvedores Android: utilizar Kotlin
 - Para desenvolvedores IOS: utilizar Swift
@@ -33,17 +33,17 @@ Você pode utilizar ele dentro do applicativo ou carrega-las utilizando o host d
 - Experiência de usuário
 
 ## Melhorias
-Realize o teste com os recursos disponíveis, porém anote e nos envie qualquer melhoria que gostaria de realizar e o porque deveriamos implementar tal melhoria.
+Realize o teste com os recursos disponíveis, porém anote e nos envie qualquer melhoria que gostaria de realizar e por que deveríamos implementar tal melhoria.
 
 ---
 
 ### API
-Abaixo segue os recursos e como executar a api que retornará os dados para a construção da tela.
+Abaixo seguem os recursos e como executar a api que retornará os dados para a construção da tela.
 
 #### Roteiro
 1. Carregue as chaves de autenticação das apis (/keys);
-2. Como não teremos uma tela de login, escolha um dos ids disponíveis no metodo /auth
-3. Agora você tem todos os dados que necessita para realizar os demais recursos. A ordem dos requests fica a seu critério.
+2. Como não teremos uma tela de login, escolha um dos ids disponíveis no metodo /auth;
+3. Agora você tem todos os dados de que necessita para realizar os demais recursos. A ordem dos requests fica a seu critério.
 
 #### Pré requisitos
 - [Docker](https://www.docker.com/) ou [NodeJs](https://nodejs.org/en/)
@@ -79,10 +79,17 @@ Response:
 
 **Importante:** Enviar a chave correspondente em todos os demais requests. Não enviar a chave ou enviar a chave errada causará um retorno com status 401.
 
+---
+
 ##### Auth
 ```sh
-curl --location --request GET 'http://localhost:4040/auth/:userId/'
+curl --location --request GET 'http://localhost:4040/auth/$userId' \
+--header 'x-api-key: $apiKey'
 ```
+Headers:
+| header | tipo | descrição |
+| ----------- | ---- | --------- |
+| x-api-key | string | chave de autenticação da api retornada pelo /keys |
 
 | ids disponíveis |
 | --------------- |
@@ -100,10 +107,12 @@ Response:
 ```
 | propriedade | tipo | descrição |
 | ----------- | ---- | --------- |
-| id | uuid | id unico de referência ao usuario |
-| name | string | nome do usuario |
-| token | string | token jwt de sessao do usuario |
-| photo | string | path da foto do usuario |
+| id | uuid | id único de referência ao usuário |
+| name | string | nome do usuário |
+| token | string | token jwt de sessão do usuário |
+| photo | string | path da foto do usuário |
+
+---
 
 ##### Suggestion
 ```sh
@@ -115,8 +124,8 @@ curl --location --request GET 'http://localhost:4040/suggestion' \
 Headers:
 | header | tipo | descrição |
 | ----------- | ---- | --------- |
-| Authorization | string | token de acesso do usuario recuperado pelo /auth |
-| x-api-key | string | chave de authenticação da api retornada pelo /keys |
+| Authorization | string | token de acesso do usuário recuperado pelo /auth |
+| x-api-key | string | chave de autenticação da api retornada pelo /keys |
 
 Response:
 ```json
@@ -143,11 +152,13 @@ Headers:
 | jobAdTitle | string | titulo da vaga |
 | company | string | nome da empresa |
 | date | string | data formatada |
-| totalPositions | number | numero de vagas no anuncio |
+| totalPositions | number | número de vagas no anúncio |
 | locations | array | lista de localidades que as vagas atendem |
 | salary | object |  |
-| salary.real | string | salario real. Quando preenchido exibir o real |
+| salary.real | string | salário real. Quando preenchido exibir o real |
 | salary.range | string | faixa salarial da vaga. Somente exibido quando não existe salarial real preenchido |
+
+---
 
 ##### Tips
 ```sh
@@ -157,7 +168,7 @@ curl --location --request GET 'http://localhost:4040/tips' \
 Headers:
 | header | tipo | descrição |
 | ----------- | ---- | --------- |
-| x-api-key | string | chave de authenticação da api retornada pelo /keys |
+| x-api-key | string | chave de autenticação da api retornada pelo /keys |
 
 Response:
 ```json
@@ -176,12 +187,14 @@ Response:
 
 | propriedade | tipo | descrição |
 | ----------- | ---- | --------- |
-| id | uuid | id unico da dica |
-| description | string | conteudo da dica |
+| id | uuid | id único da dica |
+| description | string | conteúdo da dica |
 | button | object | |
 | button.show | boolean | informa se o botão deve ser exibido ou não |
 | button.label | string | label do botão |
 | button.url | string | url que deve ser carregada ao clicar no botão |
+
+---
 
 ##### Survey
 ```sh
@@ -193,8 +206,8 @@ curl --location --request POST 'http://localhost:4040/survey/tips/$tipId/$action
 Headers:
 | header | tipo | descrição |
 | ----------- | ---- | --------- |
-| Authorization | string | token de acesso do usuario recuperado pelo /auth |
-| x-api-key | string | chave de authenticação da api retornada pelo /keys |
+| Authorization | string | token de acesso do usuário recuperado pelo /auth |
+| x-api-key | string | chave de autenticação da api retornada pelo /keys |
 
 | actions disponiveis |
 | ----------- |
@@ -214,8 +227,8 @@ Response:
 
 | propriedade | tipo | descrição |
 | ----------- | ---- | --------- |
-| id | uuid | id unico da resposta enviada |
+| id | uuid | id único da resposta enviada |
 | created-at | string | timestamp do envio da resposta |
-| tipId | uuid | id unico da dica para qual foi respondido |
+| tipId | uuid | id único da dica para qual foi respondido |
 | action | string | resposta enviada |
 | message | string | descrição do status da request |
