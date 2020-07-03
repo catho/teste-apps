@@ -21,7 +21,7 @@ module.exports = {
             });
         }
 
-        if (!actions[action]) {
+        if (actions[action] === undefined) {
             return response.status(404).json({
                 status: 404,
                 messagem: 'action not found',
