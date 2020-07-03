@@ -10,11 +10,11 @@ module.exports = [
     },
     {
         id: 'eef3d974-083d-48af-be40-a339b2b66f28',
-        description: 'Antes de enviar o seu currículo, que tal checar a última vez que você o atualizou? Uma informação a mais pode ser o ponta-pé que falta rumo à sua próxima entrevista de emprego.',
+        description: 'Vagas no seu perfil. Busque sempre vagas dentro do seu perfil. Isso aumentará a compatibilidade entre as sugestões de vagas e o seu perfil.',
         button: {
             show: false,
-            label: 'checar curriculos',
-            url: 'https://www.catho.com.br'
+            label: 'buscar vagas',
+            url: 'https://www.catho.com.br/vagas'
         }
     }
 ];
