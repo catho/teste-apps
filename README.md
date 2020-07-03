@@ -35,6 +35,11 @@ Você pode utilizar ele dentro do aplicativo ou carregá-las utilizando o host d
 ## Melhorias
 Realize o teste com os recursos disponíveis, porém anote e nos envie quaisquer sugestão de melhoria que julgar adequadas e por que deveríamos implementá-las.
 
+## Como aplicar
+Você deve criar um repositório público no GitHub.com para nossa avaliação.  Ao finalizar, por favor, envie-nos o link do repositório por e-mail. Você utilizará esse projeto apenas para rodar as apis.
+
+Boa Sorte!
+
 ---
 
 ### API
