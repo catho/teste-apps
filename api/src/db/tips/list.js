@@ -12,8 +12,17 @@ module.exports = [
         id: 'eef3d974-083d-48af-be40-a339b2b66f28',
         description: 'Vagas no seu perfil. Busque sempre vagas dentro do seu perfil. Isso aumentará a compatibilidade entre as sugestões de vagas e o seu perfil.',
         button: {
-            show: false,
+            show: true,
             label: 'buscar vagas',
+            url: 'https://www.catho.com.br/vagas'
+        }
+    },
+    {
+        id: 'eef3d974-083d-48af-be40-a339b2b66f28',
+        description: 'Se candidate. Para quanto mais vagas você se candidatar, maiores são as suas chances de conseguir uma entrevista.',
+        button: {
+            show: false,
+            label: 'me candidatar',
             url: 'https://www.catho.com.br/vagas'
         }
     }

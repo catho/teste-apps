@@ -30,7 +30,7 @@ const routes = (server) => {
   );
 
   server.post(
-    '/survey/tips/:tipId/',
+    '/survey/tips/:tipId/:action/',
     apigateway.handle('survey'),
     sessionValidation,
     surveyTipsController.handle,
