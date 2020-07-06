@@ -18,8 +18,8 @@ Você pode utilizar ele dentro do aplicativo ou carregá-las utilizando o host d
 ### Premissas
 **Importante:** escolha uma linguagem conforme a vaga que está participando no processo.
 
-- Para desenvolvedores Android: utilizar Kotlin
-- Para desenvolvedores IOS: utilizar Swift
+- Para desenvolvedores Android: utilizar Kotlin, Java ou Flutter
+- Para desenvolvedores IOS: utilizar Swift ou Flutter
 
 ## O que será avaliado
 - Organização e clareza de código
